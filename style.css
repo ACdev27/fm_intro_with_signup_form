@@ -12,10 +12,12 @@
   --text-placeholder: hsl(248, 9%, 26%);
   --input-border-gray: hsl(0, 0%, 87%);
   --input-border-focus: hsl(248, 33%, 49%);
+  --input-border-error: hsl(0, 100%, 74%);
   --btn-primary: hsl(154, 59%, 51%);
   --btn-primary-hover: hsl(154, 65%, 68%);
   --link-primary: hsl(0, 100%, 74%);
   --link-primary-hover: hsl(0, 100%, 82%);
+  --container: 1110px;
 }
 
 /*
@@ -34,8 +36,9 @@ opacity: 0.1;
 
 /* Utility */
 .container {
-  max-width: 1440px;
+  max-width: var(--container);
   margin: 0 auto;
+  padding: 0 24px;
   border: 1px solid red;
 }
 
@@ -55,7 +58,6 @@ body {
   display: flex;
   flex-direction: row;
   min-height: 800px;
-  padding: 0 80px;
   gap: 45px
 }
 
@@ -114,7 +116,7 @@ p {
 .form-card {
   max-width: 540px;
   margin-top: 24px;
-  padding: 40px; 
+  padding: 40px 40px 42px 40px; 
   border-radius: 10px;
   background-color: var(--bg-white);
   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
@@ -124,8 +126,8 @@ p {
 input {
   display: block;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 15px 32px;
+  margin-top: 18px;
+  padding: 19px 32px;
   border-radius: 5px;
   font-size: 1.4rem;
   font-weight: 600;
@@ -135,13 +137,32 @@ input {
   border-radius: 5px;;
   outline: none;
 }
+input:first-child {
+  margin-top: 0px;
+}
 input:focus {
   border-color: var(--input-border-focus);
+}
+
+.input-error {
+  border: 2px solid var(--input-border-error);
+  background: var(--bg-white) url("images/icon-error.svg") no-repeat right 27px center;
+}
+.error-message {
+  margin-top: 6px;
+  color: var(--text-red);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: right;
 }
 
 .btn {
   width: 100%;
   height: 56px;
+  margin-top: 20px;
+  margin-bottom: 6px;
   text-transform: uppercase;
   color: var(--text-white);
   background-color: var(--secondary-color);
