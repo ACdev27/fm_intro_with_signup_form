@@ -17,15 +17,8 @@
   --btn-primary-hover: hsl(154, 65%, 68%);
   --link-primary: hsl(0, 100%, 74%);
   --link-primary-hover: hsl(0, 100%, 82%);
-  --container: 1110px;
+  --container: 1178px;
 }
-
-/*
-of the backgournd image eiements
-mix-blend-mode: normal;
-opacity: 0.1;
-*/
-
 
 /* Resets */
 * {
@@ -39,7 +32,6 @@ opacity: 0.1;
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 24px;
-  border: 1px solid red;
 }
 
 html {
@@ -66,18 +58,16 @@ body {
   flex-direction: column;
   justify-content: center;
   flex-basis: 50%;
-  border: 1px solid green;
 }
 .form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-basis: 50%;
-  border: 1px solid blue;
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 55px;;
   color: var(--text-white);
@@ -153,7 +143,7 @@ input:focus {
   color: var(--text-red);
   font-style: italic;
   font-weight: 500;
-  font-size: 11px;
+  font-size: 1.1rem;
   line-height: 16px;
   text-align: right;
 }
@@ -193,13 +183,76 @@ input:focus {
 }
 
 
-.attribution { font-size: 11px; text-align: center; margin-top: 15px;}
+.attribution { font-size: 1.1rem; text-align: center; margin-top: 15px;}
 .attribution a { color: hsl(228, 100%, 81%); }
 
 
-/*
-content width 1110 
+
+@media only screen and (max-width: 1024px) {
+  h2 {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  h2 {
+    font-size: 4.25rem;
+    line-height: 45px;
+  }
+  .intro {
+    flex-basis: 45%;
+  }
+  .form-container {
+    flex-basis: 55%;
+  }
+}
 
 
-*/
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 4rem;
+    line-height: 45px;
+  }
+  section#intro {
+    height: auto;
+    padding-bottom: 70px;;
+  }
+  .intro-form-container {
+    flex-direction: column;
+    align-items: center;
+    min-height: 800px;
+    gap: 0;
+  }
+  .intro {
+    margin-top: 30px;
+  }
+  .form-container {
+    margin-top: 45px;
+  }
+}
  
+@media only screen and (max-width: 425px) {
+  .intro {
+    margin-top: 88px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.291667px;
+  }
+  .form-container {
+    margin-top: 70px;
+  }
+  .offer-container {
+    height: 88px;
+  }
+  .offer {
+    width: 70%;
+    text-align: center;
+  }
+  input {
+    padding: 15px 19px;
+  }
+}
