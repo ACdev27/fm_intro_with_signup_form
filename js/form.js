@@ -8,13 +8,13 @@ const passwordInput = document.getElementById('password');
 // Get reference to submit button & add event listener
 document.querySelector('button').addEventListener('click', validateForm);
 
-// Event listeners for each input field
+// Event listeners for each input field - blur evemt
 firstNameInput.addEventListener('blur', validateForm);
 lastNameInput.addEventListener('blur', validateForm);
 emailInput.addEventListener('blur', validateForm);
 passwordInput.addEventListener('blur', validateForm);
 
-// Validated form function
+// Validate form function
 function validateForm(e) {
 
   // Reset error warning

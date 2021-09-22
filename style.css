@@ -67,7 +67,7 @@ body {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 5rem;
   font-weight: 700;
   line-height: 55px;;
   color: var(--text-white);
@@ -225,7 +225,7 @@ input:focus {
     gap: 0;
   }
   .intro {
-    margin-top: 30px;
+    margin-top: 50px;
   }
   .form-container {
     margin-top: 45px;
@@ -242,8 +242,12 @@ input:focus {
     line-height: 36px;
     letter-spacing: -0.291667px;
   }
+  .intro {
+    flex-basis: 100%;
+  }
   .form-container {
     margin-top: 70px;
+    flex-basis: 100%;
   }
   .offer-container {
     height: 88px;
