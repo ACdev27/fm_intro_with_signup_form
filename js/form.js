@@ -38,7 +38,6 @@ function validateForm(e) {
   } else {
     let regEx = /^\w+@\w+\.\w{3}$/;
     let result = regEx.test(emailInput.value.trim());
-    console.log("result: " + result)
     if (!result) {
       showInputError(emailInput, 'Looks like this is not an email');
     }
@@ -62,7 +61,6 @@ function validateForm(e) {
  }
 
  // Show error border and error message for input fields
- // Arguments: name of input element, error message
  function showInputError(inputEl, message) {
   inputEl.classList.add("input-error");
   let errorMsg = inputEl + "Error";
